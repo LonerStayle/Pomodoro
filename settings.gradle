@@ -16,3 +16,4 @@ rootProject.name = "PomodroTimer"
 include ':app'
 include ':domain'
 include ':data'
+include ':service_locator'

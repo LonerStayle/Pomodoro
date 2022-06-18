@@ -8,7 +8,7 @@ import kr.loner.data.local.model.WorkGroupDto
 
 @Database(entities = [TimeScheduleDto::class], version = 1)
 abstract class TimeScheduleDataBase : RoomDatabase() {
-    abstract fun TimeScheduleDao(): TimeScheduleDao
+    abstract fun timeScheduleDao(): TimeScheduleDao
 
     companion object {
         @Volatile

@@ -3,7 +3,7 @@ package kr.loner.domain.usecase.base
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.withContext
 
-abstract class NonParamCoroutineUseCase<R>(private val coroutineDispatcher: CoroutineDispatcher) {
+abstract class NonParamCoroutineUseCase<R>(private val coroutineDispatcher: CoroutineDispatcher):UseCase {
     suspend operator fun invoke(): Result<R> = try {
         withContext(coroutineDispatcher) {
             execute().let {

@@ -44,11 +44,7 @@ object ServiceLocator {
         return useCase
     }
 
-    fun getUseCase(key: KeyUseCase, context: Context, dispatcher: CoroutineDispatcher): UseCase {
+    fun providerUseCase(key: KeyUseCase, context: Context, dispatcher: CoroutineDispatcher): UseCase {
         return useCaseGroup[key] ?: createUseCase(context, key, dispatcher)
     }
-
-
-
-
 }

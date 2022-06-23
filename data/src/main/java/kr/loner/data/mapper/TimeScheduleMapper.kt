@@ -5,5 +5,5 @@ import kr.loner.data.local.model.WorkGroupDto
 import kr.loner.domain.model.TimeSchedule
 import kr.loner.domain.model.WorkGroup
 
-private fun WorkGroupDto.toDomainModel(): WorkGroup = WorkGroup(value, date)
+private fun WorkGroupDto.toDomainModel(): WorkGroup = WorkGroup(value, updateDate)
 fun TimeScheduleDto.toDomainModel(): TimeSchedule = TimeSchedule(id, works.toDomainModel())
